@@ -154,12 +154,6 @@
 			overflow: hidden;
 		}
 
-		img {
-			max-width: 100%;
-			height: auto;
-			vertical-align: middle;
-		}
-
 		.clearfix::after {
 			content: '';
 			display: table;
@@ -509,17 +503,23 @@
 			border-top: 1px solid rgba(255, 69, 0, 0.7);
 		}
 
-		.hours li:nth-child(2) .box img,
-		.hours li:nth-child(3) .box img,
-		.hours li:nth-child(4) .box img {
+		.hours li:nth-child(2) .box .img-wrapper {
 			position: absolute;
 			left: 0;
 			top: 0;
+			width: 100%;
+			height: 10%;
+		}
+
+		.hours li:nth-child(2) .box img,
+		.hours li:nth-child(3) .box img,
+		.hours li:nth-child(4) .box img {
+			display: block;
 			-webkit-transform: rotate(180deg);
 			-ms-transform: rotate(180deg);
 			transform: rotate(180deg);
 			width: 100%;
-			height: 10%;
+			height: 100%;
 		}
 
 		.hours li:nth-child(3) .box img {
@@ -985,7 +985,9 @@
 					</li>
 					<li>
 						<div class="box">
-							<img src="data:image/svg+xml,%3Csvg width='122' height='120' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.976 5l116.048 114.5H.977V5z' fill='%23EEE'/%3E%3Cpath stroke='%23FF4500' stroke-opacity='1' stroke-width='7' d='M3.464 2.514l116 115'/%3E%3C/svg%3E" alt="">
+							<div class="img-wrapper">
+								<img
+									src="data:image/svg+xml,%3Csvg width='122' height='120' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.976 5l116.048 114.5H.977V5z' fill='%23EEE'/%3E%3Cpath stroke='%23FF4500' stroke-opacity='1' stroke-width='7' d='M3.464 2.514l116 115'/%3E%3C/svg%3E" alt=""></div>
 							<div class="box-dot"></div>
 							<div class="temp-wrapper">
 								<div class="icon"></div>
